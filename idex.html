@@ -11,19 +11,52 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="title_text">Hello world</h1>
+    <!-- <h1 id="title_text">Hello world</h1>
     <div id="greetings">Chomnan</div>
     <button onclick="color_change()">This will Change color</button>
     <button id="button2">This will Change color</button>
     <button id="button3">This will Change color</button>
     <button id="button4" onclick="hide_element()">Hide element</button>
-    <button id="button5">Unhide element</button>
+    <button id="button5">Unhide element</button> -->
+    <input type = "text" name="" id="todo">
+    <button onclick="addElement()">Add Element</button>
     <script src="script.js"></Script>
-
+    <div id="results"></div>
+    <script>
+        function addElement() {
+            let newElement = document. createElement ('p');
+            let add_text = document.getElementById("todo").value
+            newElement. innerHTML = add_text;
+            let result = document.getElementById("results");
+            result.appendChild(newElement);
+            document.getElementById("todo").value=""
+            }   
+    </script>
+    <!-- <script>
+        function addElement() {
+            let newElement = document. createElement ('p');
+            newElement. innerHTML = document.getElementById("todo").value;
+            let result = document.getElementById("results");
+            result.appendChild(newElement);
+            }   
+    </script> -->
+    <!-- <script>
+        function addElement() {
+            let newElement = document. createElement ('p');
+            newElement. innerHTML = "Hello World";
+            let result = document.getElementById("results");
+            result.appendChild(newElement);
+            }   
+    </script> -->
 
 
 <!-- Event
     ทุกๆ element สามารถมี Event อะไรบางอย่าง 
 -->
+<!-- 
+    1.เราสามารถสร้าง Element ใหม่ได้แล้ว
+    2.เราจะเพิ่มข้อความลงไปใน Element ใหม่ที่สร้าง
+    3.เราสามารถเรียก Element ที่อยากจะเพิ่มข้อมูลได้แล้ว
+    4.เพิ่มข้อมูลใหม่ลงใน Element ปลายทาง   -->
 </body>
 </html>
